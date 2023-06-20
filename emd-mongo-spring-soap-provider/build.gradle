@@ -20,7 +20,6 @@ java {
 }
 
 bootJar {
-
     archiveBaseName = 'emd-mongo-spring-soap-provider'
     archiveVersion = version + snapshot
 }
