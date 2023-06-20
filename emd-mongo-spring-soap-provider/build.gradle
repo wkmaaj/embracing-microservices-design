@@ -11,15 +11,18 @@ plugins {
 }
 
 group = 'llc.jaradatbros'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.3'
+def snapshot = '-SNAPSHOT'
+def release = '-RELEASE'
 
 java {
     sourceCompatibility = '17'
 }
 
 bootJar {
+
     archiveBaseName = 'emd-mongo-spring-soap-provider'
-    archiveVersion = '0.0.2'
+    archiveVersion = version + snapshot
 }
 
 configurations {

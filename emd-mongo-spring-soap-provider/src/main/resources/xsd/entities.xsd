@@ -34,6 +34,14 @@
             <xs:enumeration value="PLN" />
             <xs:enumeration value="USD" />
             <xs:enumeration value="JOR" />
+            <xs:enumeration value="JPY" />
+            <xs:enumeration value="DKK" />
+            <xs:enumeration value="CHF" />
+            <xs:enumeration value="AUD" />
+            <xs:enumeration value="DZD" />
+            <xs:enumeration value="AOA" />
+            <xs:enumeration value="ARS" />
+            <xs:enumeration value="AMD" />
         </xs:restriction>
     </xs:simpleType>
 

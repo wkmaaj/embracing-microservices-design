@@ -4,7 +4,7 @@ db.createUser({
   roles: [
     {
       role: "readWrite",
-      db: "emd-spring-mongo-soap-provider"
+      db: "emd-mongo-spring-soap-provider"
     }
   ]
 })
@@ -14,18 +14,18 @@ db.Countries.insertMany([
   {
     name: "United States of America",
     capital: "Washington D.C.",
-    isoCurrency: "USD",
+    currency: "USD",
     abbreviation: "US"
   },
   {
     name: "United Kingdom",
     capital: "London",
-    isoCurrency: "GBP",
+    currency: "GBP",
     abbreviation: "UK"
   },
-  { name: "Italy", capital: "Rome", isoCurrency: "EUR", abbreviation: "IT" },
-  { name: "Jordan", capital: "Amman", isoCurrency: "JOR", abbreviation: "JO" },
-  { name: "Japan", capital: "Tokyo", isoCurrency: "JPY", abbreviation: "JP" }
+  { name: "Italy", capital: "Rome", currency: "EUR", abbreviation: "IT" },
+  { name: "Jordan", capital: "Amman", currency: "JOR", abbreviation: "JO" },
+  { name: "Japan", capital: "Tokyo", currency: "JPY", abbreviation: "JP" }
 ])
 
 db.Bikes.insertMany([

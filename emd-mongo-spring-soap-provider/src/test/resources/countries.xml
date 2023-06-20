@@ -4,7 +4,7 @@
     <soapenv:Header />
     <soapenv:Body>
         <emd:GetCountryRequest>
-            <emd:name>Jordan</emd:name>
+            <emd:name>Japan</emd:name>
         </emd:GetCountryRequest>
     </soapenv:Body>
 </soapenv:Envelope>

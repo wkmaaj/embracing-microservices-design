@@ -23,6 +23,14 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <enumeration value="PLN"/>
  *     <enumeration value="USD"/>
  *     <enumeration value="JOR"/>
+ *     <enumeration value="JPY"/>
+ *     <enumeration value="DKK"/>
+ *     <enumeration value="CHF"/>
+ *     <enumeration value="AUD"/>
+ *     <enumeration value="DZD"/>
+ *     <enumeration value="AOA"/>
+ *     <enumeration value="ARS"/>
+ *     <enumeration value="AMD"/>
  *   </restriction>
  * </simpleType>
  * }</pre>
@@ -36,7 +44,15 @@ public enum Currency {
     EUR,
     PLN,
     USD,
-    JOR;
+    JOR,
+    JPY,
+    DKK,
+    CHF,
+    AUD,
+    DZD,
+    AOA,
+    ARS,
+    AMD;
 
     public String value() {
         return name();
