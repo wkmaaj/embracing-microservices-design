@@ -1,0 +1,10 @@
+<soapenv:Envelope
+    xmlns:emd="llc:jaradatbros:emd:api:soap:mongo"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header />
+    <soapenv:Body>
+        <emd:GetCountryRequest>
+            <emd:name>Jordan</emd:name>
+        </emd:GetCountryRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

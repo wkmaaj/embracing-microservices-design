@@ -1,0 +1,10 @@
+<soapenv:Envelope
+    xmlns="llc:jaradatbros:emd:api:soap:mongo"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header />
+    <soapenv:Body>
+        <GetBikeRequest>
+            <name>Jordan</name>
+        </GetBikeRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
