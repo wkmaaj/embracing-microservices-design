@@ -21,7 +21,7 @@ public class CountryEndpoint {
         this.countriesRepository = countriesRepository;
     }
 
-    @PayloadRoot(namespace = WebServiceConstants.COUNTRIES_WS_SOAP_NAMESPACE_URI, localPart = "GetCountryRequest")
+    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "GetCountryRequest")
     @ResponsePayload
     public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
         GetCountryResponse response = new GetCountryResponse();

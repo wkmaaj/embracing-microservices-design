@@ -17,11 +17,6 @@ public class WebServiceConstants {
     public static final String BIKES_WS_SOAP_BEAN_NAME = "bikes";
 
     /**
-     * The namespace URI used in the bikes WSDL.
-     */
-    public static final String BIKES_WS_SOAP_NAMESPACE_URI = "emd:api:spring:mongosoap";
-
-    /**
      * The classpath name of the bikes schema file.
      */
     public static final String BIKES_WS_SOAP_SCHEMA = XSD_DIR + BIKES_WS_SOAP_BEAN_NAME + XSD_FILE_EXT;
@@ -45,11 +40,6 @@ public class WebServiceConstants {
      * The name of the entities web service bean.
      */
     public static final String ENTITIES_WS_SOAP_BEAN_NAME = "entities";
-
-    /**
-     * The namespace URI used in the countries WSDL.
-     */
-    public static final String COUNTRIES_WS_SOAP_NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
 
     /**
      * The namespace URI used in the entities WSDL.

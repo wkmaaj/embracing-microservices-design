@@ -20,7 +20,7 @@ public class BikeEndpoint {
         this.bikeRepository = bikeRepository;
     }
 
-    @PayloadRoot(namespace = WebServiceConstants.BIKES_WS_SOAP_NAMESPACE_URI, localPart = "GetBikeRequest")
+    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "GetBikeRequest")
     @ResponsePayload
     public GetBikeResponse getBike(@RequestPayload GetBikeRequest request) {
         Bike bike = new Bike();
