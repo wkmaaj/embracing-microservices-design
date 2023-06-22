@@ -3,8 +3,8 @@
     xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
     <soapenv:Header />
     <soapenv:Body>
-        <GetBikeRequest>
+        <getBikeRequest>
             <name>Cannondale</name>
-        </GetBikeRequest>
+        </getBikeRequest>
     </soapenv:Body>
 </soapenv:Envelope>

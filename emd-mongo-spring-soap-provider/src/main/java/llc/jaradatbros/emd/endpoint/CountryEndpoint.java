@@ -41,7 +41,7 @@ public class CountryEndpoint {
         logger.info("Bean instantiated");
     }
 
-    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "GetCountryRequest")
+    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "getCountryRequest")
     @ResponsePayload
     public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
         logger.info("Looking up country name: {}", request.getName());

@@ -41,7 +41,7 @@ public class BikeEndpoint {
         logger.info("Bean instantiated");
     }
 
-    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "GetBikeRequest")
+    @PayloadRoot(namespace = WebServiceConstants.ENTITIES_WS_SOAP_NAMESPACE_URI, localPart = "getBikeRequest")
     @ResponsePayload
     public GetBikeResponse getBike(@RequestPayload GetBikeRequest request) {
         logger.info("Looking up bike name: {}", request.getName());

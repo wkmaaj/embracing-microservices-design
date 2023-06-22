@@ -3,8 +3,8 @@
     xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
     <soapenv:Header />
     <soapenv:Body>
-        <emd:GetCountryRequest>
+        <emd:getCountryRequest>
             <emd:name>Japan</emd:name>
-        </emd:GetCountryRequest>
+        </emd:getCountryRequest>
     </soapenv:Body>
 </soapenv:Envelope>

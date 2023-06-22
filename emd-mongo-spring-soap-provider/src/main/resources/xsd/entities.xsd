@@ -2,7 +2,7 @@
     xmlns:tns="llc:jaradatbros:emd:api:soap:mongo"
     targetNamespace="llc:jaradatbros:emd:api:soap:mongo"
     elementFormDefault="qualified">
-    <xs:element name="GetCountryRequest">
+    <xs:element name="getCountryRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="name" type="xs:string" />
@@ -10,24 +10,24 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="GetCountryResponse">
+    <xs:element name="getCountryResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="country" type="tns:Country" />
+                <xs:element name="country" type="tns:country" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="Country">
+    <xs:complexType name="country">
         <xs:sequence>
             <xs:element name="name" type="xs:string" />
             <xs:element name="population" type="xs:nonNegativeInteger" />
             <xs:element name="capital" type="xs:string" />
-            <xs:element name="currency" type="tns:Currency" />
+            <xs:element name="currency" type="tns:currency" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="Currency">
+    <xs:simpleType name="currency">
         <xs:restriction base="xs:string">
             <xs:enumeration value="GBP" />
             <xs:enumeration value="EUR" />
@@ -45,7 +45,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="BikeComponentTypeEnum">
+    <xs:simpleType name="bikeComponentTypeEnum">
         <xs:restriction base="xs:string">
             <xs:enumeration value="FrontChainwheel" />
             <xs:enumeration value="FrontDerailleur" />
@@ -54,7 +54,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:element name="GetBikeRequest">
+    <xs:element name="getBikeRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:sequence>
@@ -64,34 +64,34 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="GetBikeResponse">
+    <xs:element name="getBikeResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="bike" type="tns:Bike" />
+                <xs:element name="bike" type="tns:bike" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="Bike">
+    <xs:complexType name="bike">
         <xs:sequence>
             <xs:element name="name" type="xs:string" />
-            <xs:element name="frontChainwheel" type="tns:BikeComponent" />
-            <xs:element name="frontDerailleur" type="tns:BikeComponent" />
-            <xs:element name="rearDerailleur" type="tns:BikeComponent" />
-            <xs:element name="cassetteSprocket" type="tns:BikeComponent" />
+            <xs:element name="frontChainwheel" type="tns:bikeComponent" />
+            <xs:element name="frontDerailleur" type="tns:bikeComponent" />
+            <xs:element name="rearDerailleur" type="tns:bikeComponent" />
+            <xs:element name="cassetteSprocket" type="tns:bikeComponent" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="BikeComponent">
+    <xs:complexType name="bikeComponent">
         <xs:sequence>
             <xs:element name="name" type="xs:string" />
             <xs:element name="manufacturer" type="xs:string" />
             <xs:element name="model" type="xs:string" />
-            <xs:element name="type" type="tns:BikeComponentTypeEnum" />
+            <xs:element name="type" type="tns:bikeComponentTypeEnum" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="BikeComponentChainring">
+    <xs:complexType name="bikeComponentChainring">
         <xs:sequence>
             <xs:choice>
                 <xs:element name="chainring" type="xs:nonNegativeInteger" />
