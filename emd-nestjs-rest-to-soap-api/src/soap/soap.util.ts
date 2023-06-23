@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { logger } from '../log';
+// import { logger } from '../log';
 import { Namespace, SoapConvert } from './soap.convert';
 
 @Injectable()
@@ -26,9 +26,9 @@ export class SoapUtil {
     console.log(
       `SoapUtil | convertRestToSoap | Incoming variables:\n${request}\n${nsOpts}\n${opts}`,
     );
-    logger.trace('SoapUtil', '', request);
-    logger.trace('SoapUtil', '', nsOpts);
-    logger.trace('SoapUtil', '', opts);
+    // logger.trace('SoapUtil', '', request);
+    // logger.trace('SoapUtil', '', nsOpts);
+    // logger.trace('SoapUtil', '', opts);
 
     return this.soapConvert.buildSoapEnvelope(
       this.soapConvert.buildSoapBody({
