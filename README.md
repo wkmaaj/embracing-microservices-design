@@ -14,6 +14,73 @@
 
 > An umbrella application of microservices ranging from APIs to UIs and everything in between.
 
+<!-- <h2 align="center">TODO 🏋🏻‍♀️</h2> -->
+
+## TODO 🏋🏻‍♂️
+
+A list of things to do and/or pursue:
+
+- Microservices will include (list to grow):
+
+  - microservices that read data from data sources (i.e. Mongo, Neo4j, PostgreSQL, MySQL)
+  - microservices that write data to data sources (i.e. Mongo, neo4j, postgresql, mysql)
+
+    - these microservices will also be responsible for publishing new WRITE events to Kafka
+
+  - microservices that run batch jobs that convert data from one data model to another, i.e., a microservice that maps a Mongo document to a Neo4j node, a microservice that converts a PostgreSQL table to a Mongo document, and so on
+
+    - these microservices will also be responsible for listening for new WRITE events published to Kafka
+    - these microservices will subscribe to Kafka channels/streams and trigger a batch process in response to new WRITE events
+
+  - microservices that translate communication messages, i.e., a microservice that converts REST messages in JSON format to SOAP messages in XML
+
+- MicroUIs will be built that will be combined to form whole user interfaces resulting in improved resiliency as the entire UI will not crash due to a feature (i.e. microUI) encountering issues
+
+## TECHNOLOGIES
+
+### Java
+
+- Spring Boot
+- Spring Batch
+- Spring Data
+- Maven
+- Gradle
+
+### JavaScript
+
+- Nest.js
+- Next.js
+- Qwik
+- React
+- SolidJS
+- Pino
+
+### Databases
+
+#### SQL
+
+- PostgreSQL
+- MySQL
+- Oracle (possibly)
+
+#### NoSQL
+
+- Mongo
+- Neo4j
+- Cassandra (possibly)
+
+### Containers
+
+- Docker
+
+### Communication
+
+- SOAP over HTTP(S)
+- REST over HTTP(S)
+- GraphQL
+
+## Links
+
 ### 🏠 [Homepage](https://github.com/wkmaaj/embracing-microservices-design)
 
 ### ✨ [Demo](https://github.com/wkmaaj/embracing-microservices-design)
@@ -40,10 +107,10 @@ test script
 
 👤 **wkmaaj**
 
-* Website: wkmaaj.com
-* Twitter: [@wkmaaj](https://twitter.com/wkmaaj)
-* Github: [@wkmaaj](https://github.com/wkmaaj)
-* LinkedIn: [@wkmaaj](https://linkedin.com/in/wkmaaj)
+- Website: wkmaaj.com
+- Twitter: [@wkmaaj](https://twitter.com/wkmaaj)
+- Github: [@wkmaaj](https://github.com/wkmaaj)
+- LinkedIn: [@wkmaaj](https://linkedin.com/in/wkmaaj)
 
 ## 🤝 Contributing
 
@@ -62,5 +129,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2023 [wkmaaj](https://github.com/wkmaaj).<br />
 This project is [MIT](https://www.mit.edu/~amini/LICENSE.md) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

@@ -1,7 +1,15 @@
 import { Injectable } from '@nestjs/common';
+import { HttpService } from '../http/http.service';
+import { Namespace } from './soap.convert';
+import { SoapUtil } from './soap.util';
 
 @Injectable()
 export class SoapService {
+  constructor(
+    private readonly soapUtil: SoapUtil,
+    private readonly httpService: HttpService,
+  ) {}
+
   envelope =
     '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">' +
     '<SOAP-ENV:Header/>' +
@@ -16,15 +24,24 @@ export class SoapService {
     '</SOAP-ENV:Body>' +
     '</SOAP-ENV:Envelope>';
 
-  convert(request: {
-    country: {
-      name: string;
-      capital: string;
-      currency: string;
-      abbreviation: string;
+  async convert(request: {
+    getCountryRequest: {
+      country: Partial<{
+        name: string;
+        capital: string;
+        currency: string;
+        abbreviation: string;
+      }>;
     };
-  }): string {
-    console.log(JSON.stringify(request, null, 2));
-    return this.envelope;
+    namespace?: Partial<Namespace>;
+    namespaces?: Partial<Namespace>[];
+  }): Promise<string> {
+    return this.httpService.sendRequest(
+      this.soapUtil.convertRestToSoap(request),
+    );
+  }
+
+  upAndRunning(): string {
+    return 'SOAP service is up and running.';
   }
 }

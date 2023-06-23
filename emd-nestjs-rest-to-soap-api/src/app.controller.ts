@@ -1,23 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-import { SoapService } from './soap/soap.service';
 
 @Controller()
 export class AppController {
-  constructor(
-    private readonly appService: AppService,
-    private readonly soapService: SoapService,
-  ) {}
+  constructor(private readonly appService: AppService) {}
 
   @Get()
   getHello(): string {
-    return `${this.appService.getHello()} ${this.soapService.convert({
-      country: {
-        name: 'Jordan',
-        capital: 'Amman',
-        currency: 'JOR',
-        abbreviation: 'JO',
-      },
-    })}`;
+    return this.appService.getHello();
   }
 }

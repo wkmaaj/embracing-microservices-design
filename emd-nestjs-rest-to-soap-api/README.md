@@ -15,6 +15,14 @@
 
 > An API that exposes a REST endpoint that receives a client request in JSON format and converts it into a SOAP message (i.e. XML format) and then sends the request, additionally, the endpoint receives the server response in XML format and converts it into a REST message (i.e. JSON format) and sends the response.
 
+<h2 align="center">Commands</h2>
+
+```sh
+curl -v POST -H "Content-Type: application/json" -d "{\"getCountryRequest\":{\"name\": \"Italy\"}, \"namespace\":{\"prefix\": \"\", \"value\":\"\"}, \"namespaces\": [{\"prefix\": \"\", \"value\": \"\"}]}" http://localhost:3000/soap/convert
+
+curl -v POST -H "Content-Type: application/json" -d "{\"getBikeRequest\":{\"name\": \"Tommaso\"}, \"namespace\":{\"prefix\": \"\", \"value\":\"\"}, \"namespaces\": [{\"prefix\": \"\", \"value\": \"\"}]}" http://localhost:3000/soap/convert
+```
+
 <h2 align="center">NestJS Framework 🏖️</h2>
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
