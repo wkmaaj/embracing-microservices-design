@@ -51,17 +51,12 @@ tasks.register('genJaxb') {
 
 repositories {
     mavenCentral()
-<<<<<<< Updated upstream
     google()
     maven {
         url "https://repo.spring.io/release"
     }
     maven {
         url "https://repository.jboss.org/maven2"
-=======
-    maven {
-        url "https://plugins.gradle.org/m2/"
->>>>>>> Stashed changes
     }
 }
 
