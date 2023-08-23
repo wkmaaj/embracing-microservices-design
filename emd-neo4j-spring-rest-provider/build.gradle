@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
+}
+
+group = 'llc.jaradatbros.emd'
+version = '0.0.5'
+def snapshot = '-SNAPSHOT'
+def release = '-RELEASE'
+
+java {
+    sourceCompatibility = '19'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+ext {
+    set('snippetsDir', file("build/generated-snippets"))
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest'
+    implementation group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.40'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok'
+    // testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    // testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    testImplementation group: 'org.springframework.restdocs', name: 'spring-restdocs-mockmvc', version: '3.0.0'
+    // testImplementation 'org.neo4j:neo4j-ogm-test'
+    testImplementation group: 'org.neo4j', name: 'neo4j-ogm-test', version: '3.2.0-alpha02'
+}
+
+tasks.named('test') {
+    outputs.dir snippetsDir
+    useJUnitPlatform()
+}
+
+tasks.named('asciidoctor') {
+    inputs.dir snippetsDir
+    dependsOn test
+}
+
+tasks.named('wrapper') {
+    distributionType = Wrapper.DistributionType.ALL
+    distributionSha256Sum = '5625a0ae20fe000d9225d000b36909c7a0e0e8dda61c19b12da769add847c975'
+}

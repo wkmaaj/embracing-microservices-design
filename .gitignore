@@ -39,3 +39,11 @@ out/
 
 # Ignore Gradle build output directory
 build
+
+**/*/node_modules
+
+**/*/dist
+
+**/*/.docker
+
+**/*/.husky

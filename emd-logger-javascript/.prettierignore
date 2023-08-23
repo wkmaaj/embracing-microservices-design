@@ -1,0 +1,18 @@
+# @see https://prettier.io/docs/en/ignore.html
+# Ignore formatting files in the below dirs
+.docker
+__docker__
+.next
+.vscode
+node_modules
+out
+deployment
+manifest
+coverage
+
+# Ignore formatting files with the following extensions
+*.csv
+*.pdf
+*.png
+*.ico
+*.yaml

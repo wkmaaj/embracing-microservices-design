@@ -1,0 +1,19 @@
+{
+  "name": "kafkajs-crash-course",
+  "version": "0.0.5",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "emd-nodejs-pino-logger": "file:../../emd-nodejs-pino-logger",
+    "kafkajs": "^2.2.4",
+    "nodejs-color-module": "file:../nodejs-color-module",
+    "safe-stable-stringify": "^2.4.3"
+  }
+}

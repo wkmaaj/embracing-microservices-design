@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  neo4j-local:
+    image: "neo4j:latest"
+    container_name: "emdneo4j"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+    ports:
+      # localhost-port:container-port
+      - "7687:7687"
+      - "7474:7474"
+    volumes:
+      # - "./docker-init-mongo.js:/docker-entrypoint-initdb.d/docker-init-mongo.js:ro"
+      - "./.docker/neo4j:/data"

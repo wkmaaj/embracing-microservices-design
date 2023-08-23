@@ -1,5 +1,5 @@
 import pino from 'pino';
-import { stringify } from 'querystring';
+import { stringify } from '../utils';
 
 const pinolog = (
   name: string,
@@ -11,7 +11,7 @@ const pinolog = (
     name,
     browser: isClientLogger
       ? {
-          write: (o: any): string => stringify(o, null, '2'),
+          write: (o: any): string => stringify()(o, null, '2'),
         }
       : {},
     level: 'trace',

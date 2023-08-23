@@ -1,0 +1,34 @@
+version = '0.0.5'
+def tags = ['-SNAPSHOT', '-RELEASE']
+def tagname = name + '-v' + version + tags[0]
+println "Constructed project tag name: $tagname"
+
+def PATH = System.getenv('PATH')
+println 'This is executed during the configuration phase.'
+# println "PATH variable during the configuration phase: $PATH"
+# println '---------------------------------------------------'
+# println "project variable: $project"
+# println project.PATH_SEPARATOR
+# println project.DEFAULT_BUILD_FILE
+# println "gradle properties: $project.GRADLE_PROPERTIES"
+# println '---------------------------------------------------'
+
+tasks.register('configured') {
+    println 'This is also executed during the configuration phase, because :configured is used in the build.'
+}
+
+tasks.register('test') {
+    println "This is executed during the execution phase.\nPATH variable during the execution phase: $PATH"
+}
+
+tasks.register('testBoth') {
+    doFirst {
+        println 'This is executed first during the execution phase.'
+    }
+
+    doLast {
+        println "This is executed last during the execution phase.\nPATH variable during the execution phase: $PATH"
+    }
+
+    println 'This is executed during the configuration phase as well, because :testBoth is used in the build.'
+}

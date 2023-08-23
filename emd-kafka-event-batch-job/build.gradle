@@ -1,0 +1,37 @@
+println "project.configuration | build | Building gradle project: $name"
+project.ext {
+    tags = ['-SNAPSHOT', '-RELEASE']
+    path = "$System.env.PATH"
+}
+
+version = '0.0.5'
+def tagname = name + '-v' + version + ext.tags[1]
+println "project.configuration | build | initial variable tagname: $tagname"
+tagname = name + '-v' + version + ext.tags[0]
+println "project.configuration | build | modified variable tagname: $tagname"
+println "project.configuration | build | Environment variables available on system path:\n$ext.path"
+println 'project.configuration | build | Call execution'
+
+tasks.register('configured') {
+    println 'project.configuration | build | Registering task: configured'
+}
+
+tasks.register('test') {
+    doLast {
+        println 'project.execution | build | Last call: test'
+    }
+
+    println 'project.configuration | build | Registering task: test'
+}
+
+tasks.register('testBoth') {
+    doFirst {
+        println 'project.execution | build | First call: testBoth'
+    }
+
+    doLast {
+        println 'project.execution | build | Last call: testBoth'
+    }
+
+    println 'project.configuration | build | Registering task: testBoth'
+}
