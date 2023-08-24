@@ -76,7 +76,8 @@
   },
   "lint-staged": {
     "*.+((j|t)sx?)": [
-      "eslint -c  ./emd-logger-typescript/.eslintrc --fix ./emd-logger-typescript/src"
+      "eslint -c  ./emd-logger-typescript/.eslintrc --fix ./emd-logger-typescript/src",
+      "prettier --write --log-level debug ./emd-logger-typescript/src"
     ]
   }
 }
