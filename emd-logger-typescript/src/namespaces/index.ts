@@ -1,6 +1,6 @@
 declare namespace EmdLogger {
   interface Opts {
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   interface StringifyOpts extends Opts {
@@ -42,7 +42,7 @@ declare namespace EmdLogger {
     };
   }
 
-  interface LoggingLevel extends Opts {
+  interface LoggingLevelOpts extends Opts {
     level: 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal';
   }
 
@@ -66,9 +66,8 @@ declare namespace EmdLogger {
   /**
    * see {@link https://stackoverflow.com/a/57192972 Typescript: No index signature with a parameter of type 'string' was found on type}
    */
-  interface RuntimeOpts extends Opts {
+  interface RuntimeOpts extends LoggingLevelOpts {
     config: {
-      logLevel: LoggingLevel;
       basePath: string;
       [key: string]: string | { [key: string]: string };
     };

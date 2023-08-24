@@ -28,15 +28,15 @@ namespace ValidationOriginal {
   }
 }
 
-let strings = ['Hello', '98052', '191', '22150-0241'];
+const strings = ['Hello', '98052', '191', '22150-0241'];
 
-let validators: { [key: string]: StringValidator } = {};
+const validators: { [key: string]: StringValidator } = {};
 validators['ZIP Code'] = new ZipCodeValidator();
 validators['Letters Only'] = new LettersOnlyValidator();
 
-for (let s of strings) {
-  for (let name in validators) {
-    let isMatch = validators[name].isAcceptable(s);
+for (const s of strings) {
+  for (const name in validators) {
+    const isMatch = validators[name].isAcceptable(s);
     console.log(
       `'${s}' - ${isMatch ? 'matches' : 'does not match'} '${name}'.`
     );

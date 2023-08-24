@@ -21,6 +21,13 @@
     "implicit-arrow-linebreak": 0,
     "import/extensions": ["error", { "ignorePackages": true }],
     "import/order": ["off"],
+    "max-classes-per-file": [
+      "error",
+      {
+        "ignoreExpressions": true,
+        "max": 3
+      }
+    ],
     "no-confusing-arrow": 0,
     "no-plusplus": 0,
     "object-curly-newline": [
@@ -34,6 +41,18 @@
     "quotes": 0,
     "@typescript-eslint/comma-dangle": [2, "never"],
     "@typescript-eslint/indent": 0,
-    "@typescript-eslint/quotes": [2, "single"]
+    "@typescript-eslint/quotes": [2, "single"],
+    // Temporarily disabled
+    "@typescript-eslint/triple-slash-reference": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-shadow": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "import/prefer-default-export": 0,
+    "class-methods-use-this": 0,
+    "guard-for-in": 0,
+    "no-console": 0,
+    "@typescript-eslint/no-unused-expressions": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "no-restricted-syntax": 0
   }
 }
