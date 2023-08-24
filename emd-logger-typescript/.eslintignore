@@ -1,6 +1,0 @@
-*.config.js
-dist
-node_modules
-samples
-sbx
-log
