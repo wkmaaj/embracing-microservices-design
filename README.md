@@ -14,6 +14,14 @@
 
 > An umbrella application of microservices ranging from APIs to UIs and everything in between.
 
+# DEPRECATED
+
+This repo is being deprecated in favor of more specific repositories, please see:
+[Embracing Microservices Design - Message Event Publisher](https://github.com/wkmaaj/emd-kafka-spring-publisher)
+[Embracing Microservices Design - MongoDB SOAP Service](https://github.com/wkmaaj/emd-mongo-spring-soap-provider)
+[Embracing Microservices Design - Typescript Logger](https://github.com/wkmaaj/emd-logger-typescript)
+[Embracing Microservices Design - REST to SOAP API](https://github.com/wkmaaj/emd-nestjs-rest-to-soap-api)
+
 <!-- <h2 align="center">TODO 🏋🏻‍♀️</h2> -->
 
 ## TODO 🏋🏻‍♂️
